@@ -24,7 +24,7 @@ class OllamaTextClassifier:
         return pd.Series(results)
 
 def measure_accuracy(actual: pd.Series, prediction: pd.Series):
-    classification_report(actual, prediction)
+    return classification_report(actual, prediction)
 
 def load_prompt(path: str) -> str:
     with open(path, "r", encoding="utf-8") as f:
