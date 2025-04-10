@@ -19,8 +19,13 @@ class OllamaTextClassifier:
         results = []
         for text in tqdm(texts):
             response = chat(model=self.model, messages=[{"role": "user", "content": prompt + text}])
-            results.append(response['message']['content'].strip())
-
+            response = response['message']['content'].strip()
+            if response == "Reference to other reviews":
+                results.append(1)
+            elif response == "No reference":
+                results.append(0)
+            else:
+                results.append(-1)
         return pd.Series(results)
 
 def measure_accuracy(actual: pd.Series, prediction: pd.Series):
