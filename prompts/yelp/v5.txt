@@ -1,0 +1,46 @@
+Your task is to classify online text reviews from the food rating platform yelp. The reviews either contain references to other reviews on yelp or no references at all.
+Reference to other reviews:
+    - Explicit mentioning of reviews (e.g. "I read the other reviews", "I have to agree with the other raters")
+    - Indirect mentioning of reviews (e.g. "I don't understand the hype")
+    - Mentioning of review platform (e.g. "Yelp helped us find this restaurant")
+No references:
+    - Solely description of own experience
+    - Comparison to other restaurants
+    - Mentioning of other restaurants (e.g. "it was as good as in place xy")
+    - References to other sources than yelp (e.g. "a friend recommended this place")
+    - Mentioning of Yelp in another context (e.g. "came here with some friends from yelp")
+
+Examples:
+Input:
+"Decided to go here due to great reviews but was not impressed.
+Output: Reference to other reviews # mentions "great reviews"
+
+Input:
+"After reading all the reviews with less than four stars for ethiopian food in manhattan, I chose Zoma."
+Output: Reference to other reviews # read all the reviews with less than four stars
+
+Input:
+"What a delight to find this place so close to the theater district but away from the touristy craziness of Times Square (thank you, Yelp, for that!)"
+Output: Reference to other reviews # implicit references the reviews and ratings by saying that Yelp helped to find this restaurant
+
+Input:
+"Yes, believe the hype. This restaurant lived up to its accolades."
+Output: Reference to other reviews # the word hype implies high rating reviews
+
+Input:
+"Short version: I've never given such a low rating to a restaurant in Williamsburg"
+Output: No reference # doesn't mention other reviews at all and just describe personal experience
+
+Input:
+"Their bread is delicious and the pastrami is right up there with Katz&#39;s. If you&#39;re there for lunch and brought an appetite, I highly recommend."
+Output: No reference # mentions other restaurant 'Katz's' which isn't a reference to yelp reviews
+
+Input:
+"Not the snowdays I remembered it to be in terms of quality (I've been to the Flushing one and the one near NYU), so it's a bit disappointing!"
+Output: No reference # mentions other locations which isn't a reference to other reviews
+
+Input:
+"As competitors to Nargis and referred by a few clients who said I MUST try it, it was good food!"
+Output: No reference # references a recommendation by a client and not yelp
+
+Now it's your turn. Answer with "No reference" or "Reference to other reviews". Quickly explain why you choose your answer. Use the examples as reference.

@@ -1,0 +1,15 @@
+Your task is to classify online text reviews from the food rating platform yelp. The reviews either contain references to other reviews on yelp or no references at all.
+The only relevant references are to reviews from Yelp itself. Obvious references to other platforms or people do not count.
+
+Reference to other reviews:
+    - Explicit mentioning of reviews (e.g. "I read the other reviews", "I have to agree with the other raters")
+    - Indirect mentioning of reviews (e.g. "I don't understand the hype", "how can this restaurant be lower than 5 stars")
+    - Mentioning of review platform (e.g. "Yelp helped us find this restaurant")
+No references:
+    - Solely description of own experience
+    - Comparison to other restaurants (e.g. "the pastrami is right up there with Katz's")
+    - References to other sources than yelp (e.g. "a friend recommended this place", "I heard many things about this eatery")
+    - Writing about own review (e.g. "my 5 star review", "as you may have seen in my other reviews")
+    - Mentioning of Yelp in another context (e.g. "came here with some friends from yelp", "got some free shots from yelp")
+
+Now it's your turn. Answer with "No reference" or "Reference to other reviews". Quickly explain why you choose your answer.
