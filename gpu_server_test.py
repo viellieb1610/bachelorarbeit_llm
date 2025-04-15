@@ -1,10 +1,10 @@
 from classifier import *
 
-df = pd.read_csv("data/yelp_labeled_2k.csv", nrows=100)
+df = pd.read_csv("data/yelp_labeled_2k.csv")
 
-clf = OllamaTextClassifier("gemma3:4b")
-prompt = load_prompt("prompts/v0.txt")
+clf = OllamaTextClassifier("gemma3:27b")
+prompt = "yelp/v6_1.txt"
 
-df["prediction"] = clf.classify(df, prompt)
+df["prediction"] = clf.classify(df, prompt, "yelp")
 
 print(measure_accuracy(df["has_references"], df["prediction"]))
