@@ -23,7 +23,8 @@ class OllamaTextClassifier:
         answers = []
         print(f"Classifying {len(texts)} {platform} texts with model {self.model} using prompt: {prompt}")
         for text in tqdm(texts):
-            text = '\nInput:\n"' + text + '"\nOutput:'
+            #text = '\nInput:\n"' + text + '"\nOutput:'
+            text = f'\nInput:\n"{text}"\nOutput:'
             response = chat(model=self.model, messages=[{"role": "user", "content": loaded_prompt + text}])
             response = response['message']['content'].strip()
             response = " ".join(response.splitlines())
@@ -38,7 +39,7 @@ class OllamaTextClassifier:
         df['prediction'] = results
         df['answers'] = answers
         timestamp = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
-        df.to_csv(f"runs/{timestamp}-{self.model}-{len(texts)}.csv")
+        df.to_csv(f"runs/{platform}/{timestamp}-{self.model}-{len(texts)}.csv")
         return pd.Series(results)
 
 def measure_accuracy(actual: pd.Series, prediction: pd.Series):

@@ -1,4 +1,4 @@
-Your task is to classify online text reviews from the movie and series rating platform IMDb. The reviews either contain references to other reviews on IMDb or no references at all.
+Your task is to classify online text reviews from the movie and series rating platform IMDb. The reviews either contain references to other reviews or ratings on IMDb or no references to other reviews.
 Reference to other reviews:
     - Explicit mentioning of reviews (e.g. "if anyone actually looked at the comments already made about the movie on this website")
     - Indirect mentioning of reviews (e.g. "this movie is a Disney sequel done right!so why do numerous people hate it?")
@@ -6,5 +6,7 @@ Reference to other reviews:
 No references:
     - Solely description of own experience
     - References to other sources than IMDb (e.g. "Good reviews from the movie critics")
+    - Comparison to other media (e.g. "the plot was the same as xy")
+    - Reference to own review (e.g. "if you read my other reviews", "you can find more reviews on my website")
 
-Now it's your turn. Answer with "No reference" or "Reference to other reviews". Quickly explain why you choose your answer.
+Now it's your turn. Answer with "No reference" or "Reference to other reviews".
