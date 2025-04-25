@@ -1,5 +1,5 @@
-Your task is to classify online text reviews from the movie, series and games rating platform IMDb.
-The reviews either contain references to other reviews on IMDb or no references at all.
+Your task is to classify online reviews from the movie, series and games rating platform IMDb.
+The review texts either contain references to other reviews on IMDb or no references at all.
 
 Reference to other reviews:
     - Explicit mentioning of reviews (e.g. "I read the other reviews", "I have to agree with the other raters")
