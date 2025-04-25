@@ -2,8 +2,8 @@ from classifier import *
 from tqdm import tqdm
 
 # CONFIG
-prompt = "yelp/v10.txt"
-platform = "yelp"
+prompt = "imdb/v7.txt"
+platform = "imdb"
 CHUNK_SIZE = 100_000
 clf = OllamaTextClassifier("gemma3:27b")
 

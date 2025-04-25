@@ -1,0 +1,18 @@
+Your task is to classify online text reviews from the movie, series and games rating platform IMDb.
+The reviews either contain references to other reviews on IMDb or no references at all.
+
+Reference to other reviews:
+    - Explicit mentioning of reviews (e.g. "I read the other reviews", "I have to agree with the other raters")
+    - Addressing of other reviews (e.g. "I'm struggling to understand the 10/10 reviews", "All y'all hatin' on the fact you'd probably neva make...")
+    - Indirect mentioning of reviews (e.g. "Even though it is not everybody's favorite season, it was still good")
+    - Mentioning of review platform (e.g. "This certainly deserves more rating than what IMDB shows")
+No references:
+    - Solely description of own experience
+    - Mentioning or comparison of/to other movies or series (e.g. "the other seasons were better")
+    - Referencing own review or personal rating (e.g. "if you read my other reviews")
+    - Writes own rating at end of the review (e.g. "...(7/10)")
+    - Mentions external critics (e.g. "I have to agree with Roger Ebert")
+    - Mentioning of IMDb in another context (e.g. "IMDb labeled this as horror")
+
+
+Now it's your turn. Answer with "No reference" or "Reference to other reviews". Quickly explain why you choose your answer

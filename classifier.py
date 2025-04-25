@@ -21,7 +21,7 @@ class OllamaTextClassifier:
 
         results = []
         answers = []
-        # print(f"Classifying {len(texts)} {platform} texts with model {self.model} using prompt: {prompt}")
+        print(f"Classifying {len(texts)} {platform} texts with model {self.model} using prompt: {prompt}")
         for text in tqdm(texts):
             #text = '\nInput:\n"' + text + '"\nOutput:'
             text = f'\nInput:\n"{text}"\nOutput:'
