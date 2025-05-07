@@ -1,6 +1,7 @@
 from classifier import *
+import pandas as pd
 
-df = pd.read_csv("data/imdb_labeled_2k.csv")
+df = pd.read_csv("../data/imdb_labeled_2k.csv")
 
 clf = OllamaTextClassifier("gemma3:27b")
 prompt = "imdb/v7.txt"

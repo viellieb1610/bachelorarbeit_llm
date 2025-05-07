@@ -50,7 +50,7 @@ class OllamaTextClassifier:
         :return: Series with results
         """
         texts = reviews.to_list()
-        loaded_prompt = load_prompt(f"prompts/{prompt}")
+        loaded_prompt = load_prompt(f"../prompts/{prompt}")
 
         results = []
         for text in tqdm(texts):
@@ -65,7 +65,7 @@ class OllamaTextClassifier:
             else:
                 results.append(-1)
 
-        return pd.Series(results)
+        return pd.Series(results, index=reviews.index)
 
 def measure_accuracy(actual: pd.Series, prediction: pd.Series):
     return classification_report(actual, prediction)
