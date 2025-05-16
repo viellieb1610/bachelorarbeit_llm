@@ -17,7 +17,7 @@ class OllamaTextClassifier:
         """
 
         texts = df['review_text'].to_list()
-        loaded_prompt = load_prompt(f"prompts/{prompt}")
+        loaded_prompt = load_prompt(f"../prompts/{prompt}")
 
         results = []
         answers = []
@@ -39,7 +39,7 @@ class OllamaTextClassifier:
         df['prediction'] = results
         df['answers'] = answers
         timestamp = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
-        df.to_csv(f"runs/{platform}/{timestamp}-{self.model}-{len(texts)}.csv")
+        df.to_csv(f"../runs/{platform}/{timestamp}-{self.model}-{len(texts)}.csv")
         return pd.Series(results)
 
     def classify(self, reviews: pd.Series, prompt: str):
